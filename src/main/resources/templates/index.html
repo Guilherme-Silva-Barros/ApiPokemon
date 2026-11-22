@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pokemon</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<main>
+    <h1>Biblioteca dos Pokemons</h1>
+    <form th:action="@{/}" method="get">
+        <input type="text" name ="termo" th:value="${termo}"
+               placeholder="Nome ou Id do Pokemon" required>
+        <button type="submit">Pesquisar</button>
+    </form>
+    <p class="erro" th:if="${erro}" th:text="${erro}"></p>
+
+    <section class="card" th:if="${pokemon}">
+        <img th:if="${pokemon.sprites != null}"
+             th:src="${pokemon.sprites.frontDefault}"
+             th:alt="${pokemon.name}">
+        <h2>#<span th:text="${pokemon.id}"></span></h2>
+        <span th:text="${#strings.capitalize(pokemon.name)}"></span>
+
+    <h3>Habilidades</h3>
+    <ul class="habilidades">
+        <li th:each="h : ${pokemon.habilidades}">
+            <strong th:text="${h.nome}"></strong>
+            <em th:text="${h.oculta}"></em>
+            <p th:text="${h.descricao}"></p>
+        </li>
+
+    </ul>
+    </section>
+
+</main>
+</body>
+</html>

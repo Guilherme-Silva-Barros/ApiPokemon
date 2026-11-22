@@ -1,0 +1,12 @@
+body { font-family: system-ui, sans-serif; background: #f2f4f8; margin: 0; }
+main { max-width: 520px; margin: 2rem auto; padding: 0 1rem; }
+h1 { text-align: center; }
+form { display: flex; gap: .5rem; margin-bottom: 1rem; }
+input { flex: 1; padding: .6rem; border: 1px solid #ccc; border-radius: 6px; }
+button { padding: .6rem 1rem; border: 0; border-radius: 6px; background: #e3350d; color: #fff; cursor: pointer; }
+.erro { color: #b00020; background: #fde7ea; padding: .6rem; border-radius: 6px; }
+.card { background: #fff; padding: 1rem 1.5rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,.1); text-align: center; }
+.card img { width: 160px; image-rendering: pixelated; }
+.tipos { display: flex; gap: .4rem; justify-content: center; }
+.tipo { background: #ddd; padding: .2rem .7rem; border-radius: 999px; text-transform: capitalize; }
+.habilidades { text-align: left; padding-left: 1.2rem; }
